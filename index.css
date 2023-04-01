@@ -4,20 +4,28 @@
     font-family: 'Times New Roman', Times, serif;
 }
 .contenedor{
-    width: 100%;
+    box-sizing: border-box;
+    display: flexbox;
+    justify-self: flex-start;
+    width: 80%;
     height: 666px;
+    margin-left: 10px;
+
     background-image: url('img/fondo.jpg');
     background-position: center;
     background-repeat: no-repeat;
 }
 .formulario{
+    box-sizing: border-box;
+    display: flexbox;
+    justify-self: flex-start;
+    align-self: flex-start;
     background-color: rgba(255, 255, 255, 0.5);
-    position: absolute;
     height: 500px;
-    width: 500px;
-    margin-left: 380px;
-    margin-right: 350px;
-    margin-top: 100px;
+    width: 350px;
+    margin-left: 30px;
+    margin-right: 380px;
+    margin-top: 150px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px  black;
    
@@ -38,23 +46,24 @@ form{
 }
 h2{
     margin-top: 20px;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
 }
 label{
    padding-top: 30px;
-    margin-left: 60px;
-    font-size: 20px;
+    margin-left: 30px;
+    font-size: 15px;
 }
 input{
     margin-top: 15px;
-    margin-left: 50px;
-    width: 80%;
+    margin-left: 20px;
+    margin-right:38px;
+    width: 60%;
     height: 30px;
    color: rgb(3, 3, 3);
    font-weight: bold;
    padding-left: 10px;
-   font-size: 20px;
+   font-size: 10px;
     background: none;
     border: none;
     border-bottom: black 2px solid;
@@ -62,7 +71,7 @@ input{
 }
 button{
     margin-top: 50px;
-    margin-left: 180px;
+    margin-left: 50px;
     height: 40px;
     width: 150px;
     background: white;
@@ -77,4 +86,21 @@ button{
 button:hover{
     background: rgb(2, 240, 69);
     font-weight: bold;
+}
+
+@media screen and (max-width: 460px)  {
+.formulario {
+    max-width: 240px;
+    margin-left:10px;
+    
+}
+h2 {
+    font-size: 15px;
+}
+button {
+    margin-left: 40px;
+}
+input {
+    width: fit-content;
+}
 }
